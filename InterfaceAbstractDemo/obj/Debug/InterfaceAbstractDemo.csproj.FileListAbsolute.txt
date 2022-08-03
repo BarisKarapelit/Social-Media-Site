@@ -1,0 +1,8 @@
+C:\Users\Turan Erdoğan\source\repos\MvcProjeKampi\InterfaceAbstractDemo\bin\Debug\InterfaceAbstractDemo.exe.config
+C:\Users\Turan Erdoğan\source\repos\MvcProjeKampi\InterfaceAbstractDemo\bin\Debug\InterfaceAbstractDemo.exe
+C:\Users\Turan Erdoğan\source\repos\MvcProjeKampi\InterfaceAbstractDemo\bin\Debug\InterfaceAbstractDemo.pdb
+C:\Users\Turan Erdoğan\source\repos\MvcProjeKampi\InterfaceAbstractDemo\obj\Debug\InterfaceAbstractDemo.csproj.AssemblyReference.cache
+C:\Users\Turan Erdoğan\source\repos\MvcProjeKampi\InterfaceAbstractDemo\obj\Debug\InterfaceAbstractDemo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Turan Erdoğan\source\repos\MvcProjeKampi\InterfaceAbstractDemo\obj\Debug\InterfaceAbstractDemo.csproj.CoreCompileInputs.cache
+C:\Users\Turan Erdoğan\source\repos\MvcProjeKampi\InterfaceAbstractDemo\obj\Debug\InterfaceAbstractDemo.exe
+C:\Users\Turan Erdoğan\source\repos\MvcProjeKampi\InterfaceAbstractDemo\obj\Debug\InterfaceAbstractDemo.pdb
