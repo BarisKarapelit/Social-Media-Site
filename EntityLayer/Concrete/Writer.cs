@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Writer
+   public class Writer
     {
         public int WriterID { get; set; }
         public string WriterName { get; set; }
@@ -14,6 +14,9 @@ namespace EntityLayer.Concrete
         public string WriterImage { get; set; }
         public string WriterMail { get; set; }
         public string WriterPassword { get; set; }
+
+        public ICollection<Heading> Headings { get; set; }
+        public ICollection<Content> Contents { get; set; }
 
     }
 }
