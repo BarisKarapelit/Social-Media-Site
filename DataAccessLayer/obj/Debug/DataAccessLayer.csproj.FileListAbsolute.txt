@@ -1,0 +1,15 @@
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\bin\Debug\EntityLayer.dll
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
