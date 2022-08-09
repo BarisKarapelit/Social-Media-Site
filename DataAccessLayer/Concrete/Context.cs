@@ -12,7 +12,7 @@ namespace DataAccessLayer.Concrete
     {
         public DbSet<About> Abouts { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Contant> Contants { get; set; }
+        public DbSet<Contact> Contants { get; set; }
         public DbSet<Content> Contents { get; set; }
         public DbSet<Heading> Headings { get; set; }
         public DbSet<Writer> Writers { get; set; }

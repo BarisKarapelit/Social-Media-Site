@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{28BBDE64-AAAD-4FC5-9230-0189813A3282}"
 	ProjectSection(SolutionItems) = preProject
 		EğitimLinki.txt = EğitimLinki.txt
+		Link.txt = Link.txt
 	EndProjectSection
 EndProject
 Global
