@@ -60,6 +60,8 @@
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Context.cs" />
+    <Compile Include="Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="Concrete\Repositories\WriterRepository.cs" />
     <Compile Include="Migrations\202208090728186_xxx.cs" />
     <Compile Include="Migrations\202208090728186_xxx.designer.cs">
       <DependentUpon>202208090728186_xxx.cs</DependentUpon>

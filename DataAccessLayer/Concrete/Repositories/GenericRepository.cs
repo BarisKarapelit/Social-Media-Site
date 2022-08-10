@@ -1,4 +1,4 @@
-﻿using DataAccessLayer.Concrete;
+﻿using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,36 +8,44 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract.Repositories
+namespace DataAccessLayer.Concrete.Repositories
 {
-    public class CategoryRepository : ICategoryDal
+    public class GenericRepository<T> : IRepository<T> where T : class
     {
         Context context = new Context();
-        DbSet<Category> _object;
+        DbSet<T> _object;
 
-        public void Delete(Category t)
+        public GenericRepository()
+        {
+            _object = context.Set<T>();
+           
+        }
+
+        public void Delete(T t)
         {
             _object.Remove(t);
             context.SaveChanges();
+
         }
 
-        public void Insert(Category t)
+        public void Insert(T t)
         {
             _object.Add(t);
             context.SaveChanges();
+
         }
 
-        public List<Category> List()
+        public List<T> List()
         {
             return _object.ToList();
         }
 
-        public List<Category> List(Expression<Func<Category, bool>> filter)
+        public List<T> List(Expression<Func<T, bool>> filter)
         {
-            throw new NotImplementedException();
+            return _object.Where(filter).ToList();
         }
 
-        public void Update(Category t)
+        public void Update(T t)
         {
             context.SaveChanges();
         }
