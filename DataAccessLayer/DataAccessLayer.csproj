@@ -62,9 +62,9 @@
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Concrete\Repositories\WriterRepository.cs" />
-    <Compile Include="Migrations\202208090728186_xxx.cs" />
-    <Compile Include="Migrations\202208090728186_xxx.designer.cs">
-      <DependentUpon>202208090728186_xxx.cs</DependentUpon>
+    <Compile Include="Migrations\202208101156510_TabloIptal.cs" />
+    <Compile Include="Migrations\202208101156510_TabloIptal.designer.cs">
+      <DependentUpon>202208101156510_TabloIptal.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,11 +80,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202208090728186_xxx.resx">
-      <DependentUpon>202208090728186_xxx.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202208101156510_TabloIptal.resx">
+      <DependentUpon>202208101156510_TabloIptal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
