@@ -10,6 +10,7 @@ namespace MvcProjeKampi.Controllers
 {
     public class CategoryController : Controller
     {
+
         CategoryManager category = new CategoryManager();
         // GET: Category
         public ActionResult Index()
@@ -18,14 +19,17 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult GetCategoryList()
         {
-            var categoryvalues = category.GetAll();
-            categoryvalues = categoryvalues.Where(p => p.CategoryStatus == true).ToList();
-            return View(categoryvalues);
+            //var categoryvalues = category.GetAll();
+            //categoryvalues = categoryvalues.Where(p => p.CategoryStatus == true).ToList();
+            //return View(categoryvalues);
+
         }
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
-            category.CategoryAddBl(p);
+            bool test = Convert.ToBoolean(p.CategoryStatus);
+            string a = p.CategoryName.ToString();
+            //category.CategoryAddBl(p);
             return RedirectToAction("GetCategoryList");
         }
         [HttpGet]

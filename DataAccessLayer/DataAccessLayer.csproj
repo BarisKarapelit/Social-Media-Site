@@ -62,6 +62,9 @@
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Concrete\Repositories\WriterRepository.cs" />
+    <Compile Include="EntityFramework\EfAboutDal.cs" />
+    <Compile Include="EntityFramework\EfCategoryDal.cs" />
+    <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202208101156510_TabloIptal.cs" />
     <Compile Include="Migrations\202208101156510_TabloIptal.designer.cs">
       <DependentUpon>202208101156510_TabloIptal.cs</DependentUpon>

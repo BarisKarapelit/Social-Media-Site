@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete.Repositories;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete.Repositories;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,26 +10,37 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-   public class CategoryManager
+    public class CategoryManager : ICategoryService
     {
-        GenericRepository<Category> category = new GenericRepository<Category>();
+        ICategoryDal _categoryDal;
 
-        public List<Category> GetAll()
+        public CategoryManager(ICategoryDal categoryDal)
         {
-            return category.List();
+            _categoryDal = categoryDal;
         }
-        public void CategoryAddBl(Category p)
+
+        //GenericRepository<Category> category = new GenericRepository<Category>();
+
+        //public List<Category> GetAll()
+        //{
+        //    return category.List();
+        //}
+        //public void CategoryAddBl(Category p)
+        //{
+        //    bool query = (p.CategoryName == ""|| p.CategoryName.Length <= 3 || p.CategoryDescription == "" || p.CategoryName.Length >= 51);
+
+        //    if (query)
+        //    {
+
+        //    }
+        //    else
+        //    {
+        //        category.Insert(p);
+        //    }
+        //}
+        public List<Category> GetList()
         {
-            bool query = (p.CategoryName == ""|| p.CategoryName.Length <= 3 || p.CategoryDescription == "" || p.CategoryName.Length >= 51);
-
-            if (query)
-            {
-
-            }
-            else
-            {
-                category.Insert(p);
-            }
+            return _categoryDal.List();
         }
     }
 }
