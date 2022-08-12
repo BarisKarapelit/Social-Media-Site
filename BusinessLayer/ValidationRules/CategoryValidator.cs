@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.ValidationRules
 {
-   public class CategoryValidatior:AbstractValidator<Category>
+   public class CategoryValidator:AbstractValidator<Category>
     {
-        public CategoryValidatior()
+        public CategoryValidator()
         {
             RuleFor(x => x.CategoryName).NotEmpty().WithMessage("Kategori Adını Boş Geçemezsiniz");
             RuleFor(x => x.CategoryDescription).NotEmpty().WithMessage("Kategori Açıklaması Boş Geçemezsiniz");
