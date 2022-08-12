@@ -19,7 +19,7 @@ namespace BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
-        #region İlkel Versiyonu
+        #region İlkel Versiyonu CategoryAdd
         //GenericRepository<Category> category = new GenericRepository<Category>();
 
         //public List<Category> GetAll()
@@ -54,6 +54,11 @@ namespace BusinessLayer.Concrete
             {
 
             }
+        }
+
+        public void CategoryAdd(Category category)
+        {
+            _categoryDal.Insert(category);
         }
     }
 }
