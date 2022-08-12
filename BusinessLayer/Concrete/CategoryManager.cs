@@ -1,6 +1,4 @@
-﻿using BusinessLayer.Abstract;
-using DataAccessLayer.Abstract;
-using DataAccessLayer.Concrete.Repositories;
+﻿using DataAccessLayer.Concrete.Repositories;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class CategoryManager : ICategoryService
+   public class CategoryManager
     {
-        ICategoryDal _categoryDal;
+        GenericRepository<Category> category = new GenericRepository<Category>();
 
-        public CategoryManager(ICategoryDal categoryDal)
+        public List<Category> GetAll()
         {
-            _categoryDal = categoryDal;
+            return category.List();
         }
+<<<<<<< HEAD
 
         #region İlkel Versiyonu CategoryAdd
         //GenericRepository<Category> category = new GenericRepository<Category>();
@@ -43,8 +42,20 @@ namespace BusinessLayer.Concrete
         #endregion
 
         public List<Category> GetList()
+=======
+        public void CategoryAddBl(Category p)
+>>>>>>> parent of 7c76042 (Entity Framework Dal)
         {
-            return _categoryDal.List();
+            bool query = (p.CategoryName == ""|| p.CategoryName.Length <= 3 || p.CategoryDescription == "" || p.CategoryName.Length >= 51);
+
+            if (query)
+            {
+
+            }
+            else
+            {
+                category.Insert(p);
+            }
         }
 
         public  void CategoryAddBl(Category category)
