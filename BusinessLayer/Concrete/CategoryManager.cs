@@ -19,6 +19,7 @@ namespace BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
+        #region İlkel Versiyonu
         //GenericRepository<Category> category = new GenericRepository<Category>();
 
         //public List<Category> GetAll()
@@ -38,9 +39,21 @@ namespace BusinessLayer.Concrete
         //        category.Insert(p);
         //    }
         //}
+
+        #endregion
+
         public List<Category> GetList()
         {
             return _categoryDal.List();
+        }
+
+        public  void CategoryAddBl(Category category)
+        {
+            bool query = (category.CategoryName == "" || category.CategoryName.Length <= 3 || category.CategoryDescription == "" || category.CategoryName.Length >= 51);
+            if (query.Equals(true))
+            {
+
+            }
         }
     }
 }

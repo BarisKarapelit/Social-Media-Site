@@ -9,3 +9,4 @@ C:\Users\baris.karapelit\Desktop\Social-Media-Site\EntityLayer\obj\Debug\EntityL
 C:\Users\baris.karapelit\Desktop\Social-Media-Site\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
 C:\Users\baris.karapelit\Desktop\Social-Media-Site\EntityLayer\obj\Debug\EntityLayer.dll
 C:\Users\baris.karapelit\Desktop\Social-Media-Site\EntityLayer\obj\Debug\EntityLayer.pdb
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache

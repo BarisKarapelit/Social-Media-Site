@@ -1,6 +1,9 @@
 ﻿@using EntityLayer.Concrete
-@model List<Category>
+@*@model List<Category>*@
+@model EntityLayer.Concrete.Category
+
 @{
+    ViewBag.Title = "Category List";
     Layout = null;
 }
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -8,22 +11,26 @@
 <table class="table table-bordered table-hover text-center">
     <tr>
         <th>
-            ID
+            @Html.DisplayNameFor(model => model.CategoryID)
+
         </th>
         <th>
-            Kategori Adi
+            
+             @Html.DisplayNameFor(model=>model.CategoryName)
         </th>
         <th>
-            Açıklama
+            @Html.DisplayNameFor(model => model.CategoryDescription)
+
         </th>
         <th>
-            Durum
+            @Html.DisplayNameFor(model => model.CategoryStatus)
+
         </th>
         <th>
             Güncelle
         </th>
     </tr>
-    @foreach (var category in Model)
+    @foreach (var category in ViewBag.categoryvalues)
     {
         
         <tr>
