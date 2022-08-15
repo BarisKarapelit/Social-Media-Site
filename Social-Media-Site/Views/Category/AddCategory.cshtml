@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h1 class="text-center">Yeni Kategori Ekleme Sayfası</h1>
+<br />
+<form class="form-group" method="post">
+
+    <input type="text" name="CategoryName" value="" placeholder="Kategori Adı" />
+    <br />
+    <input type="text" name="CategoryDescription" value="" placeholder="Kategori Açıklaması" />
+    <br />
+    <input class="form-check-input" name="CategoryStatus" type="checkbox" value="true" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+        Durum
+    </label>
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>

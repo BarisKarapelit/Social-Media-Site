@@ -1,0 +1,46 @@
+﻿@using EntityLayer.Concrete
+
+@model EntityLayer.Concrete.Category
+@{
+    ViewBag.Title = "Category List";
+    Layout = null;
+
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryID)
+
+        </th>
+        <th>
+
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryDescription)
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryStatus)
+
+        </th>
+        <th>
+            Güncelle
+        </th>
+    </tr>
+    @foreach (var category in ViewBag.categoryvalues)
+    {
+
+        <tr>
+            <td>@category.CategoryID</td>
+            <td>@category.CategoryName</td>
+            <td>@category.CategoryDescription</td>
+            <td>@category.CategoryStatus</td>
+            <td><button class="btn btn-info">Güncelle</button></td>
+
+        </tr>
+
+    }
+</table>

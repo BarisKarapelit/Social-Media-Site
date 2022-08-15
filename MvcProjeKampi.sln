@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32630.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcProjeKampi", "MvcProjeKampi\MvcProjeKampi.csproj", "{3ADD3019-CB0D-4B74-B9BD-8C6062121448}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{B291022A-0C54-4DF4-9CDC-6B921193505F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{F1FEF53C-FA42-4921-BD85-A0D532D29BCF}"
@@ -17,16 +15,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Link.txt = Link.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social-Media-Site", "Social-Media-Site\Social-Media-Site.csproj", "{35F3B025-207F-4AA6-A60F-4B986A5ACA09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3ADD3019-CB0D-4B74-B9BD-8C6062121448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3ADD3019-CB0D-4B74-B9BD-8C6062121448}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3ADD3019-CB0D-4B74-B9BD-8C6062121448}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3ADD3019-CB0D-4B74-B9BD-8C6062121448}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B291022A-0C54-4DF4-9CDC-6B921193505F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B291022A-0C54-4DF4-9CDC-6B921193505F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B291022A-0C54-4DF4-9CDC-6B921193505F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{781B4DA6-824D-4F3D-9C4C-E6B165BBCE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{781B4DA6-824D-4F3D-9C4C-E6B165BBCE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{781B4DA6-824D-4F3D-9C4C-E6B165BBCE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35F3B025-207F-4AA6-A60F-4B986A5ACA09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F3B025-207F-4AA6-A60F-4B986A5ACA09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F3B025-207F-4AA6-A60F-4B986A5ACA09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F3B025-207F-4AA6-A60F-4B986A5ACA09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
