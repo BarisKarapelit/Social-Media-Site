@@ -6,16 +6,29 @@
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <h1 class="text-center">Yeni Kategori Ekleme Sayfası</h1>
 <br />
-<form class="form-group" method="post">
 
-    <input type="text" name="CategoryName" value="" placeholder="Kategori Adı" />
+
+<form class="form-control form-control-lg text-center border-success " method="post">
     <br />
-    <input type="text" name="CategoryDescription" value="" placeholder="Kategori Açıklaması" />
     <br />
-    <input class="form-check-input" name="CategoryStatus" type="checkbox" value="true" id="flexCheckDefault">
+
+    <input class="border-success" type="text" name="CategoryName" value="" placeholder="Kategori Adı" />
+    <br />
+    <br />
+
+    <input class="border-success" type="text" name="CategoryDescription" value="" placeholder="Kategori Açıklaması" />
+    <br />
+    <br />
+
+    <input class="form-check-input " name="CategoryStatus" type="checkbox" value="true" id="flexCheckDefault">
     <label class="form-check-label" for="flexCheckDefault">
         Durum
     </label>
     <br />
-    <button class="btn btn-info">Ekle</button>
+    <br />
+
+    <button class="btn btn-group btn-lg btn-outline-success">Ekle</button>
+    <br />
+    <br />
+
 </form>
