@@ -47,18 +47,19 @@ namespace BusinessLayer.Concrete
             return _categoryDal.List();
         }
 
-        public  void CategoryAddBl(Category category)
-        {
-            bool query = (category.CategoryName == "" || category.CategoryName.Length <= 3 || category.CategoryDescription == "" || category.CategoryName.Length >= 51);
-            if (query.Equals(true))
-            {
+        //public  void CategoryAddBl(Category category)
+        //{
+        //    bool query = (category.CategoryName == "" || category.CategoryName.Length <= 3 || category.CategoryDescription == "" || category.CategoryName.Length >= 51);
+        //    if (query.Equals(true))
+        //    {
 
-            }
-        }
+        //    }
+        //}
 
-        public void CategoryAdd(Category category)
+        public void CategoryAddBL(Category category)
         {
             _categoryDal.Insert(category);
         }
+
     }
 }

@@ -24,7 +24,7 @@ namespace Social_Media_Site.Controllers
             var categoryvalues = category.GetList();
             categoryvalues = categoryvalues.Where(p => p.CategoryStatus == true).ToList();
             ViewBag.categoryvalues = categoryvalues;
-            Console.WriteLine(categoryvalues);
+           
             return View();
         }
 
@@ -36,7 +36,7 @@ namespace Social_Media_Site.Controllers
             ValidationResult result = categoryValidator.Validate(p);
             if (result.IsValid)
             {
-                category.CategoryAdd(p);
+                category.CategoryAddBL(p);
                 return RedirectToAction("GetCategoryList");
             }
             else
@@ -46,8 +46,8 @@ namespace Social_Media_Site.Controllers
                     ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
                 }
             }
-            category.CategoryAddBl(p);
-            return RedirectToAction("GetCategoryList");
+
+            return View();
             
         }
 
