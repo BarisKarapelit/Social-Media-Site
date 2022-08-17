@@ -1,7 +1,7 @@
 ﻿@using EntityLayer.Concrete
 @model EntityLayer.Concrete.Category
 @{
-    ViewBag.Title = "Category List";
+    ViewBag.Title = "AdminCategory";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -26,19 +26,27 @@
         <th>
             Güncelle
         </th>
+        <th>Sil</th>
+        <th>Başlıklar</th>
     </tr>
     @foreach (var category in ViewBag.categoryvalues)
     {
 
-        <tr>
-            <td>@category.CategoryID</td>
-            <td>@category.CategoryName</td>
-            <td>@category.CategoryDescription</td>
-            <td>@category.CategoryStatus</td>
-            <td><button class="btn btn-info">Güncelle</button></td>
-
-        </tr>
+<tr>
+    <th>@category.CategoryID</th>
+    <td>@category.CategoryName</td>
+    <td>@category.CategoryDescription</td>
+    <td>@category.CategoryStatus</td>
+    <td><a href="/AdminCategory/EditCategory/@category.CategoryID" class="btn btn-info">Güncelle</a></td>
+    <td><a href="/AdminCategory/DeleteCategory/@category.CategoryID" class="btn btn-warning">Sil</a></td>
+    <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
+</tr>
 
     }
 </table>
+<div class="text-center">
+    <a href="/AdminCategory/AddCategory" class="btn btn-info">
+        Yeni Kategori
+    </a>
+</div>
 

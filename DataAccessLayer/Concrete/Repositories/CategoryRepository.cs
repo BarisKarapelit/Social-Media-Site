@@ -21,11 +21,17 @@ namespace DataAccessLayer.Abstract.Repositories
             context.SaveChanges();
         }
 
+        public Category Get(Expression<Func<Category, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Insert(Category t)
         {
             _object.Add(t);
             context.SaveChanges();
         }
+
 
         public List<Category> List()
         {
