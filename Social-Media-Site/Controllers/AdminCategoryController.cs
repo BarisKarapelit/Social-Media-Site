@@ -59,5 +59,11 @@ namespace Social_Media_Site.Controllers
             var categoryValue = category.GetByID(id);
             return View(categoryValue);
         }
+        [HttpPost]
+        public ActionResult EditCategory(Category p)
+        {
+            category.CategoryUpdate(p);
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -1,0 +1,96 @@
+﻿ 
+@ViewBag.data = yazilim 
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+<link href="~/CSS/boxicons.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/CSS/statictics.css" rel="stylesheet" />
+<div class="container mt-5 mb-3">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card p-3 mb-2">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="icon">
+                            @*<i class="bx bxl-mailchimp"></i>*@
+                            <iconify-icon icon="flat-color-icons:statistics" width="60" height="60"></iconify-icon>
+                        </div>
+                        
+                        <div class="ms-2 c-details">
+                            <h6 class="mb-0">İstatistik</h6> <span>1 days ago</span>
+                        </div>
+                    </div>
+                    <div class="badge"> <span>Design</span> </div>
+                </div>
+                <div class="mt-5">
+                    <h3 class="heading">Toplam kategori sayısı</h3>
+                    <div class="mt-5">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="mt-3"> <span class="text1">@ViewBag.categoryQuantity </span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 mb-2">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="icon"> <iconify-icon icon="flat-color-icons:statistics" width="60" height="60"></iconify-icon> </div>
+                        <div class="ms-2 c-details">
+                            <h6 class="mb-0">İstatistik</h6> <span>4 days ago</span>
+                        </div>
+                    </div>
+                    <div class="badge"> <span>Product</span> </div>
+                </div>
+                <div class="mt-5">
+                    <h3 class="heading"> Başlık tablosunda <br>"yazılım" kategorisine ait başlık sayısı</h3>
+                    <div class="mt-5">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="mt-3"> 
+                            <span class="text1">
+                            
+                                @foreach (var item in @ViewBag.data)
+                                {
+                                <p>
+                                    @item
+                                </p>
+                                }
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 mb-2">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="icon"> <iconify-icon icon="flat-color-icons:statistics" width="60" height="60"></iconify-icon> </div>
+                        <div class="ms-2 c-details">
+                            <h6 class="mb-0">İstatistik</h6> <span>2 days ago</span>
+                        </div>
+                    </div>
+                    <div class="badge"> <span>Design</span> </div>
+                </div>
+                <div class="mt-5">
+                    <h3 class="heading">Software Architect <br>Java - USA</h3>
+                    <div class="mt-5">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="mt-3"> <span class="text1">52 Applied <span class="text2">of 100 capacity</span></span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
