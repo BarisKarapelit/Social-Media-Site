@@ -1956,6 +1956,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="İmg\Sertifika Görev 2.png" />
     <None Include="CSS\statictics.scss" />
     <Content Include="CSS\boxicons.min.css" />
     <Content Include="Global.asax" />
