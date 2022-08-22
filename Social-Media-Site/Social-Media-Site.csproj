@@ -1956,7 +1956,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="İmg\Sertifika Görev 2.png" />
+    <Content Include="İmg\Statistic\menu-bar.png" />
+    <Content Include="İmg\Statistic\menu.png" />
+    <Content Include="İmg\Statistic\Sertifika Görev 2.png" />
+    <Content Include="İmg\Statistic\software.png" />
+    <Content Include="İmg\Statistic\writing.png" />
+    <Content Include="İmg\Statistic\yes-or-no.png" />
     <None Include="CSS\statictics.scss" />
     <Content Include="CSS\boxicons.min.css" />
     <Content Include="Global.asax" />
