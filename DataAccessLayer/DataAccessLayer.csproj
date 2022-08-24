@@ -72,6 +72,10 @@
     <Compile Include="Migrations\202208101156510_TabloIptal.designer.cs">
       <DependentUpon>202208101156510_TabloIptal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208241137263_mig_writer_edit.cs" />
+    <Compile Include="Migrations\202208241137263_mig_writer_edit.designer.cs">
+      <DependentUpon>202208241137263_mig_writer_edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,6 +92,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202208101156510_TabloIptal.resx">
       <DependentUpon>202208101156510_TabloIptal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208241137263_mig_writer_edit.resx">
+      <DependentUpon>202208241137263_mig_writer_edit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,16 @@ namespace Social_Media_Site.Controllers
         {
             var writerValues = writerManager.GetList();
             ViewBag.writerValues = writerValues.ToList();
+            return View();
+        }
+        [HttpGet]
+        public ActionResult AddWriter()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddWriter(Writer writer)
+        {
             return View();
         }
     }

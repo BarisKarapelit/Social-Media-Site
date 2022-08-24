@@ -1,0 +1,8 @@
+﻿.img-circular {
+  
+    background-size: cover;
+    background-position: center;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+}
