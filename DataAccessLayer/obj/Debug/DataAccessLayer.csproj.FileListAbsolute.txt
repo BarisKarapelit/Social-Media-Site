@@ -27,9 +27,9 @@ C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\bin\De
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.TabloIptal.resources
+C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_edit.resources
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_edit.resources

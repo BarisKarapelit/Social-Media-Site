@@ -15,13 +15,33 @@ namespace Social_Media_Site.Controllers
     {
         CategoryManager category = new CategoryManager(new EfCategoryDal());
         // GET: AdminCategory
+        [HttpGet]
         public ActionResult Index()
         {
             var categoryvalues = category.GetList();
-            categoryvalues = categoryvalues.Where(p => p.CategoryStatus == true).ToList();
+            
             ViewBag.categoryvalues = categoryvalues;
             return View();
         }
+        [HttpPost]
+        public ActionResult Index( EntityLayer.Concrete.Category c,string btn )
+        {
+            var categoryvalues = category.GetList();
+            if (btn=="Aktif")
+            {
+                categoryvalues = categoryvalues.Where(p => p.CategoryStatus == true).ToList();
+            }
+            else
+            {
+                categoryvalues = categoryvalues.Where(p => p.CategoryStatus == false).ToList();
+            }
+          
+            
+            
+            ViewBag.categoryvalues = categoryvalues;
+            return View();
+        }
+
         [HttpGet]
         public ActionResult AddCategory()
         {

@@ -20,8 +20,21 @@
 
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CategoryStatus)
+            @using (Html.BeginForm())
+            {
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" name="CS" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @Html.DisplayNameFor(model => model.CategoryStatus)
 
+                    </button>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" name="CS">
+                        <input type="submit" class="dropdown-item" name="btn" value="Aktif" />
+                        <input type="submit" class="dropdown-item" name="btn" value="Pasif" />
+                    </div>
+
+                </div>
+            }
         </th>
         <th>
             Güncelle
@@ -33,13 +46,31 @@
     {
 
 <tr>
-    <th>@category.CategoryID</th>
-    <td>@category.CategoryName</td>
-    <td>@category.CategoryDescription</td>
-    <td>@category.CategoryStatus</td>
-    <td><a href="/AdminCategory/EditCategory/@category.CategoryID" class="btn btn-info">Güncelle</a></td>
-    <td><a href="/AdminCategory/DeleteCategory/@category.CategoryID" class="btn btn-warning">Sil</a></td>
-    <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
+    @if (category.CategoryStatus == true)
+    {
+
+        <th>@category.CategoryID</th>
+        <td>@category.CategoryName</td>
+        <td>@category.CategoryDescription</td>
+        <td>@category.CategoryStatus</td>
+        <td><a href="/AdminCategory/EditCategory/@category.CategoryID" class="btn btn-info">Güncelle</a></td>
+        <td><a href="/AdminCategory/DeleteCategory/@category.CategoryID" class="btn btn-warning">Sil</a></td>
+        <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
+
+
+    }
+    else if(category.CategoryStatus==false)
+    {
+        <th class="table-dark">@category.CategoryID</th>
+        <td class="table-dark">@category.CategoryName</td>
+        <td class="table-dark">@category.CategoryDescription</td>
+        <td class="table-dark">@category.CategoryStatus</td>
+        <td><a href="/AdminCategory/EditCategory/@category.CategoryID" class=" btn btn-info">Güncelle</a></td>
+        <td><a href="/AdminCategory/DeleteCategory/@category.CategoryID" class=" btn btn-warning">Sil</a></td>
+        <td><a href="#" class="btn btn-primary ">Başlıklar</a></td>
+    }
+
+
 </tr>
 
     }

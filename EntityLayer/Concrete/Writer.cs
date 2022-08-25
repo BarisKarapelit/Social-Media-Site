@@ -21,6 +21,7 @@ namespace EntityLayer.Concrete
         public string WriterSurName { get; set; }
         
         [StringLength(100)]
+        [Display(Name = "Yazar Görsel Linki")]
         public string WriterImage { get; set; }
         [StringLength(100)]
         [Display(Name = "Hakkında")]
@@ -30,6 +31,8 @@ namespace EntityLayer.Concrete
         public string WriterMail { get; set; }
        
         [StringLength(200)]
+        [Display(Name = "Şifre")]
+
         public string WriterPassword { get; set; }
 
         public ICollection<Heading> Headings { get; set; }

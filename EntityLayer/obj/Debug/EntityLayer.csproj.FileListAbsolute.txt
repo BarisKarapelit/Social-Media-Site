@@ -17,8 +17,8 @@ C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\EntityLayer\bin\Debug\
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\EntityLayer\bin\Debug\EntityFramework.xml
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\EntityLayer\obj\Debug\EntityLayer.dll
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\EntityLayer\obj\Debug\EntityLayer.pdb
-C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
