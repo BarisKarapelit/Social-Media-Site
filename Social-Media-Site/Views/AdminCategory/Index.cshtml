@@ -45,33 +45,33 @@
     @foreach (var category in ViewBag.categoryvalues)
     {
 
-<tr>
-    @if (category.CategoryStatus == true)
-    {
+        <tr>
+            @if (category.CategoryStatus == true)
+            {
 
-        <th>@category.CategoryID</th>
-        <td>@category.CategoryName</td>
-        <td>@category.CategoryDescription</td>
-        <td>@category.CategoryStatus</td>
-        <td><a href="/AdminCategory/EditCategory/@category.CategoryID" class="btn btn-info">Güncelle</a></td>
-        <td><a href="/AdminCategory/DeleteCategory/@category.CategoryID" class="btn btn-warning">Sil</a></td>
-        <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
-
-
-    }
-    else if(category.CategoryStatus==false)
-    {
-        <th class="table-dark">@category.CategoryID</th>
-        <td class="table-dark">@category.CategoryName</td>
-        <td class="table-dark">@category.CategoryDescription</td>
-        <td class="table-dark">@category.CategoryStatus</td>
-        <td><a href="/AdminCategory/EditCategory/@category.CategoryID" class=" btn btn-info">Güncelle</a></td>
-        <td><a href="/AdminCategory/DeleteCategory/@category.CategoryID" class=" btn btn-warning">Sil</a></td>
-        <td><a href="#" class="btn btn-primary ">Başlıklar</a></td>
-    }
+                <th>@category.CategoryID</th>
+                <td>@category.CategoryName</td>
+                <td>@category.CategoryDescription</td>
+                <td>@category.CategoryStatus</td>
+                <td><a href="/AdminCategory/EditCategory/@category.CategoryID" class="btn btn-info">Güncelle</a></td>
+                <td><a href="/AdminCategory/DeleteCategory/@category.CategoryID" class="btn btn-warning">Sil</a></td>
+                <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
 
 
-</tr>
+            }
+            else if (category.CategoryStatus == false)
+            {
+                <th class="table-dark">@category.CategoryID</th>
+                <td class="table-dark">@category.CategoryName</td>
+                <td class="table-dark">@category.CategoryDescription</td>
+                <td class="table-dark">@category.CategoryStatus</td>
+                <td class="table-dark"><a href="/AdminCategory/EditCategory/@category.CategoryID" class=" btn btn-info">Güncelle</a></td>
+                <td class="table-dark"><a href="/AdminCategory/DeleteCategory/@category.CategoryID" class=" btn btn-warning">Sil</a></td>
+                <td class="table-dark"><a href="#" class="btn btn-primary ">Başlıklar</a></td>
+            }
+
+
+        </tr>
 
     }
 </table>
