@@ -33,3 +33,5 @@ C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\De
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.writerimglinkedit.resources
+C:\Users\baris.karapelit\source\repos\Social-Media-Site-1\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.WriteImageLinkLengthEdit.resources

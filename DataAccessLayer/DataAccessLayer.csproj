@@ -76,6 +76,14 @@
     <Compile Include="Migrations\202208241137263_mig_writer_edit.designer.cs">
       <DependentUpon>202208241137263_mig_writer_edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208260931472_writer img link edit.cs" />
+    <Compile Include="Migrations\202208260931472_writer img link edit.designer.cs">
+      <DependentUpon>202208260931472_writer img link edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208260935300_Write Image Link Length Edit.cs" />
+    <Compile Include="Migrations\202208260935300_Write Image Link Length Edit.designer.cs">
+      <DependentUpon>202208260935300_Write Image Link Length Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -95,6 +103,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208241137263_mig_writer_edit.resx">
       <DependentUpon>202208241137263_mig_writer_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208260931472_writer img link edit.resx">
+      <DependentUpon>202208260931472_writer img link edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208260935300_Write Image Link Length Edit.resx">
+      <DependentUpon>202208260935300_Write Image Link Length Edit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

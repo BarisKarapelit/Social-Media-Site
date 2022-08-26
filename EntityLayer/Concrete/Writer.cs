@@ -20,7 +20,7 @@ namespace EntityLayer.Concrete
         [Display(Name = "Yazar Soyadı")]
         public string WriterSurName { get; set; }
         
-        [StringLength(100)]
+        [StringLength(2000)]
         [Display(Name = "Yazar Görsel Linki")]
         public string WriterImage { get; set; }
         [StringLength(100)]

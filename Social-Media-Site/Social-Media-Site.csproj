@@ -1957,6 +1957,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="CSS\Writer.css" />
+    <Content Include="Js\AddWriter.js" />
     <Content Include="İmg\Statistic\menu-bar.png" />
     <Content Include="İmg\Statistic\menu.png" />
     <Content Include="İmg\Statistic\Sertifika Görev 2.png" />
@@ -2278,6 +2279,7 @@
     <Content Include="Views\StatisticsCategory\Index.cshtml" />
     <Content Include="Views\Writer\Index.cshtml" />
     <Content Include="Views\Writer\AddWriter.cshtml" />
+    <Content Include="Views\Writer\EditWriter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
