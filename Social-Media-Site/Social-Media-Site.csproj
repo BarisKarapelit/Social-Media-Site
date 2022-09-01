@@ -1958,6 +1958,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="CSS\Writer.css" />
     <Content Include="Js\AddWriter.js" />
+    <Content Include="Js\AddWriterJquery.js" />
     <Content Include="İmg\Statistic\menu-bar.png" />
     <Content Include="İmg\Statistic\menu.png" />
     <Content Include="İmg\Statistic\Sertifika Görev 2.png" />
@@ -2289,6 +2290,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="CSS\Writer\WriterAdd\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
