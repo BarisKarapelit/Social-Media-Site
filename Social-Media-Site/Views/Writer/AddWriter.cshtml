@@ -84,7 +84,7 @@
     <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-            @Html.
+         
         </div>
         @Html.ValidationMessageFor(x => x.WriterImage)
     </div>
@@ -112,109 +112,89 @@
 
 }-->
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Project Add</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
-    <!-- Ionicons -->
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-</head>
-<body class="hold-transition sidebar-mini">
-    <!-- Site wrapper -->
-   
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2 text-center">
-                        <div class="col-sm-6 ">
-                            <h1>Yeni Yazar Ekleme</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="/AdminCategory/Index">Home</a></li>
-                                <li class="breadcrumb-item active">Yazar Ekle</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div><!-- /.container-fluid -->
-            </section>
 
-            <!-- Main content -->
-            <section class="content">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">General</h3>
 
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label for="inputName">Project Name</label>
-                                    <input type="text" id="inputName" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputDescription">Project Description</label>
-                                    <textarea id="inputDescription" class="form-control" rows="4"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputStatus">Status</label>
-                                    <select class="form-control custom-select">
-                                        <option selected disabled>Select one</option>
-                                        <option>On Hold</option>
-                                        <option>Canceled</option>
-                                        <option>Success</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputClientCompany">Client Company</label>
-                                    <input type="text" id="inputClientCompany" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputProjectLeader">Project Leader</label>
-                                    <input type="text" id="inputProjectLeader" class="form-control">
-                                </div>
-                            </div>
-                            <!-- /.card-body -->
-                        </div>
-                        <!-- /.card -->
-                    </div>
-                    
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="~/CSS/Writer/WriterAdd/style.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.6.0.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Js/Writer/main.js"></script>
+<script src="~/Js/Writer/popper.js"></script>
+<link href="~/CSS/Writer/WriterAdd/add.css" rel="stylesheet" />
+<title>Yazar Ekleme</title>
+
+
+@using (Html.BeginForm("AddWriter", "Writer", FormMethod.Post, new { @class = "container" }))
+{
+
+    <section class="content-header">
+
+        <div class="container-fluid">
+            <div class="row mb-2">
+
+                <div class="col-sm-6">
+                    <h1></h1>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <a href="#" class="btn btn-secondary">Cancel</a>
-                        <input type="submit" value="Create new Porject" class="btn btn-success float-right">
-                    </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/Writer/Index">Yazar</a></li>
+                        <li class="breadcrumb-item active">Yazar Ekle</li>
+                    </ol>
                 </div>
-            </section>
-            <!-- /.content -->
-       
-        
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-6 col-xl-5">
+            <div class="login-wrap p-4 p-md-5">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <label for="WriterImage" class="fa fa-edit justify-content-center align-items-center"></label>
+                    @Html.TextBoxFor(m => m.WriterImage, new { type = "file", @id= "WriterImage" , style = "display: none;" })
+                </div>
+                <h3 class="text-center mb-4">Yazar Ekleme</h3>
+                <form action="#" class="signup-form">
+                    <div class="form-group mb-3">
+                        <label class="label" for="first_name">@Html.DisplayNameFor(model => model.WriterName)</label>
+                        @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control", @name = "first_name", @placeholder = "Tom", @type = "text" })
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="label" for="last_name">@Html.DisplayNameFor(model => model.WriterSurName)</label>
+
+                        @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control", @name = "last_name", @placeholder = "Doe", @type = "text" })
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="label" for="email">@Html.DisplayNameFor(model => model.WriterMail)</label>
+
+                        @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control", @name = "email", @placeholder = "johndoe@gmail.com", @type = "text" })
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="label" for="user_password">@Html.DisplayNameFor(model => model.WriterPassword)</label>
+                        @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control", @name = "user_password", @placeholder = @Html.DisplayNameFor(model => model.WriterPassword), @type = "text" })
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="label" for="WriterAbout">@Html.DisplayNameFor(model => model.WriterAbout)</label>
+                        @Html.TextAreaFor(x => x.WriterAbout, new { @class = "form-control", @name = "WriterAbout", @placeholder = "Açıklama", @type = "text" })
+                    </div>
+                    <div class="form-group d-md-flex">
+                        <div class="w-100 text-left">
+                            <label class="checkbox-wrap checkbox-primary">
+                                Hizmet açısından tüm ifadeleri kabul ediyorum
+                                <input type="checkbox" checked="">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary rounded submit px-3">Ekle</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
    
-    <!-- ./wrapper -->
-    
-</body>
-</html>
+}

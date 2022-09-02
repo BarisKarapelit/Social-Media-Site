@@ -1957,15 +1957,22 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="CSS\Writer.css" />
-    <Content Include="Js\AddWriter.js" />
-    <Content Include="Js\AddWriterJquery.js" />
-    <Content Include="İmg\Statistic\menu-bar.png" />
-    <Content Include="İmg\Statistic\menu.png" />
-    <Content Include="İmg\Statistic\Sertifika Görev 2.png" />
-    <Content Include="İmg\Statistic\software.png" />
-    <Content Include="İmg\Statistic\writing.png" />
-    <Content Include="İmg\Statistic\yes-or-no.png" />
-    <Content Include="İmg\Writer\user1.jpg" />
+    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="CSS\Writer\WriterAdd\add.css" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="CSS\Writer\WriterAdd\style.css" />
+    <Content Include="Js\Writer\main.js" />
+    <Content Include="Js\Writer\popper.js" />
+    <Content Include="img\Statistic\menu-bar.png" />
+    <Content Include="img\Statistic\menu.png" />
+    <Content Include="img\Statistic\Sertifika Görev 2.png" />
+    <Content Include="img\Statistic\software.png" />
+    <Content Include="img\Statistic\writing.png" />
+    <Content Include="img\Statistic\yes-or-no.png" />
+    <Content Include="img\Writer\user1.jpg" />
     <None Include="CSS\statictics.scss" />
     <Content Include="CSS\boxicons.min.css" />
     <Content Include="Global.asax" />
@@ -2281,6 +2288,8 @@
     <Content Include="Views\Writer\Index.cshtml" />
     <Content Include="Views\Writer\AddWriter.cshtml" />
     <Content Include="Views\Writer\EditWriter.cshtml" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2290,7 +2299,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="CSS\Writer\WriterAdd\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

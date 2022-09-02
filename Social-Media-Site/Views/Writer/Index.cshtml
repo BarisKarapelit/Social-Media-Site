@@ -54,8 +54,13 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
+                                            @{string resim = item.WriterImage; }
+                                            @if (item.WriterImage == null)
+                                            {
+                                                resim = "~/img/Writer/user1.jpg";
+                                            }
+                                            <img src=@item.WriterImage alt="Alternate Text" class="img-circle img-fluid" style=" border-radius: 50% !important; width: 128px !important;height:128px " />
 
-                                            <img src="~/İmg/Writer/user1.jpg" alt="Alternate Text" class="img-circle img-fluid" style=" border-radius: 50% !important; width: 128px !important;height:128px " />
                                         </div>
                                     </div>
                                 </div>

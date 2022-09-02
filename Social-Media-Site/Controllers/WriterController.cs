@@ -5,6 +5,7 @@ using EntityLayer.Concrete;
 using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -18,7 +19,9 @@ namespace Social_Media_Site.Controllers
         // GET: Writer
         public ActionResult Index()
         {
+            
             var writerValues = writerManager.GetList();
+
             ViewBag.writerValues = writerValues.ToList();
             return View();
         }
@@ -31,11 +34,25 @@ namespace Social_Media_Site.Controllers
         public ActionResult AddWriter(Writer writer)
         {
             ValidationResult result = writerValidator.Validate(writer);
+
+            if (Request.Files.Count > 0)
+            {
+                string DosyaAdi = Path.GetFileName(Request.Files[0].FileName);
+                //  string Uzanti = Path.GetExtension(Request.Files[0].FileName);
+                string Yol = "~/img/Writer" + DosyaAdi;
+                Request.Files[0].SaveAs(Server.MapPath(Yol));
+                writer.WriterImage= Yol;
+            }
+
+
             if (result.IsValid)
             {
-                writerManager.WriterAdd(writer);
-                return RedirectToAction("/Index");
 
+
+                writerManager.WriterAdd(writer);
+               
+                return RedirectToAction("/Index");
+                
             }
             else
             {
