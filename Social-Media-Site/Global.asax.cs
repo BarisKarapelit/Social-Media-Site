@@ -1,5 +1,7 @@
+using DataAccessLayer.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +15,8 @@ namespace Social_Media_Site
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            Database.SetInitializer<Context>(new DropCreateDatabaseIfModelChanges<Context>());
         }
+        
     }
 }

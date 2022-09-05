@@ -3,118 +3,6 @@
     ViewBag.Title = "AddWriter";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
-<!--using (Html.BeginForm("AddWriter", "Writer", FormMethod.Post, new { class = "well form-horizontal ", id = "contact_form" }))
-{
-
-<fieldset>-->
-<!-- Form Name -->
-<!--<center><h2><b>Yeni Yazar Ekleme</b></h2></center><br>-->
-<!-- Text input-->
-<!--<div class="form-group">
-    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.WriterName)</label>
-    <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control", @name = "first_name", @placeholder = @Html.DisplayNameFor(model => model.WriterName), @type = "text" })
-        </div>
-        @Html.ValidationMessageFor(x => x.WriterName)
-
-    </div>
-</div>-->
-<!-- Text input-->
-<!--<div class="form-group">
-    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.WriterSurName)</label>
-    <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control", @name = "last_name", @placeholder = @Html.DisplayNameFor(model => model.WriterSurName), @type = "text" })
-        </div>
-        @Html.ValidationMessageFor(x => x.WriterSurName)
-    </div>
-</div>-->
-<!-- Text input-->
-<!--<div class="form-group">
-    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.WriterPassword)</label>
-    <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control", @name = "user_password", @placeholder = @Html.DisplayNameFor(model => model.WriterPassword), @type = "text" })
-        </div>
-        @Html.ValidationMessageFor(x => x.WriterPassword)
-    </div>
-</div>-->
-<!-- Text input-->
-<!--<div class="form-group">
-    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.WriterPassword) Onayla</label>
-    <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-
-            @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control", @name = "user_password", @placeholder = @Html.DisplayNameFor(model => model.WriterPassword) + " Onayla", @type = "text" })
-        </div>
-        @Html.ValidationMessageFor(x => x.WriterPassword)
-    </div>
-</div>-->
-<!-- Text input-->
-<!--<div class="form-group">
-    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.WriterMail)</label>
-    <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-            @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control", @name = "email", @placeholder = @Html.DisplayNameFor(model => model.WriterMail), @type = "text" })
-        </div>
-        @Html.ValidationMessageFor(x => x.WriterMail)
-    </div>
-</div>
-
-<div class="form-group">
-    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.WriterAbout)</label>
-    <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-            @Html.TextAreaFor(x => x.WriterMail, new { @class = "form-control", @name = "email", @placeholder = @Html.DisplayNameFor(model => model.WriterAbout), @type = "text" })
-        </div>
-        @Html.ValidationMessageFor(x => x.WriterAbout)
-    </div>
-</div>
-
-<div class="form-group">
-    <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.WriterImage)</label>
-    <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-         
-        </div>
-        @Html.ValidationMessageFor(x => x.WriterImage)
-    </div>
-</div>-->
-<!-- Select Basic -->
-<!-- Success message -->
-<!--<div class="alert alert-success" role="alert" id="success_message">Ekle <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>-->
-<!-- Button -->
-<!--<div class="form-group">
-        <label class="col-md-4 control-label"></label>
-        <div class="col-md-4">
-            <br>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" name="btn" value="ekle">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEKLE <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
-        </div>
-    </div>
-    <style>
-        #success_message {
-            display: none;
-        }
-    </style>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</fieldset>
-
-}-->
-
-
-
-
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="~/CSS/Writer/WriterAdd/style.css" rel="stylesheet" />
@@ -126,7 +14,7 @@
 <title>Yazar Ekleme</title>
 
 
-@using (Html.BeginForm("AddWriter", "Writer", FormMethod.Post, new { @class = "container" }))
+@using (Html.BeginForm("AddWriter", "Writer", FormMethod.Post, new { @class = "container",enctype="multipart/form-data" }))
 {
 
     <section class="content-header">

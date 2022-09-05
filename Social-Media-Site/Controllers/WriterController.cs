@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace Social_Media_Site.Controllers
 {
@@ -35,24 +36,25 @@ namespace Social_Media_Site.Controllers
         {
             ValidationResult result = writerValidator.Validate(writer);
 
-            if (Request.Files.Count > 0)
+            if (Request.Files.Count != 0)
             {
                 string DosyaAdi = Path.GetFileName(Request.Files[0].FileName);
                 //  string Uzanti = Path.GetExtension(Request.Files[0].FileName);
                 string Yol = "~/img/Writer" + DosyaAdi;
                 Request.Files[0].SaveAs(Server.MapPath(Yol));
-                writer.WriterImage= Yol;
+                writer.WriterImage = Yol;
+
             }
 
 
             if (result.IsValid)
             {
-
+                
 
                 writerManager.WriterAdd(writer);
-               
                 return RedirectToAction("/Index");
-                
+
+
             }
             else
             {
@@ -76,8 +78,7 @@ namespace Social_Media_Site.Controllers
             ValidationResult result = writerValidator.Validate(writer);
             if (result.IsValid)
             {
-            writerManager.WriterUpdate(writer);
-
+                writerManager.WriterUpdate(writer);
                 return RedirectToAction("Index");
 
             }
@@ -90,5 +91,6 @@ namespace Social_Media_Site.Controllers
             }
             return View();
         }
+        
     }
 }

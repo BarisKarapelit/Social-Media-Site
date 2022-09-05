@@ -38,3 +38,4 @@ C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\obj\Debug\Dat
 C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\baris.karapelit\Desktop\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.InitialMigration.resources

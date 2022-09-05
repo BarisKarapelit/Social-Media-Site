@@ -84,6 +84,10 @@
     <Compile Include="Migrations\202208260935300_Write Image Link Length Edit.designer.cs">
       <DependentUpon>202208260935300_Write Image Link Length Edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202209051209395_InitialMigration.cs" />
+    <Compile Include="Migrations\202209051209395_InitialMigration.designer.cs">
+      <DependentUpon>202209051209395_InitialMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -109,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208260935300_Write Image Link Length Edit.resx">
       <DependentUpon>202208260935300_Write Image Link Length Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209051209395_InitialMigration.resx">
+      <DependentUpon>202209051209395_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

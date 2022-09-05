@@ -3,6 +3,9 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Core;
+using System.Data.Entity.Core.Objects;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -56,9 +59,23 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Update(T t)
         {
-            var updatedEntity = context.Entry(t);
-            updatedEntity.State = EntityState.Modified;
-            context.SaveChanges();
+            if (t!=null)
+            {
+                var updatedEntity = context.Entry(t);
+                updatedEntity.State = EntityState.Modified;
+               
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (OptimisticConcurrencyException)
+                {
+                  
+                    context.SaveChanges();
+                }
+            }
+            
         }
+      
     }
 }
