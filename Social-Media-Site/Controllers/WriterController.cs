@@ -40,7 +40,7 @@ namespace Social_Media_Site.Controllers
             {
                 string DosyaAdi = Path.GetFileName(Request.Files[0].FileName);
                 //  string Uzanti = Path.GetExtension(Request.Files[0].FileName);
-                string Yol = "~/img/Writer" + DosyaAdi;
+                string Yol = "~/img/Writer/"+writer.WriterID+ DosyaAdi;
                 Request.Files[0].SaveAs(Server.MapPath(Yol));
                 writer.WriterImage = Yol;
 

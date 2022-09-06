@@ -22,6 +22,11 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.WriterSurName).MinimumLength(2).WithMessage("Yazar Soyadı En az 2 karakter giriniz");
             RuleFor(x => x.WriterSurName).MaximumLength(50).WithMessage("Yazar Soyadı En fazla 50 karakter girebilirsiniz");
             RuleFor(x => x.WriterSurName).NotEmpty().WithMessage("Yazar Soyadını Açıklaması Boş Geçemezsiniz");
+            RuleFor(x => x.WriterMail).NotEmpty().WithMessage("Mail Boş Geçemezsiniz");
+            RuleFor(x => x.WriterMail).EmailAddress();
+            RuleFor(x => x.WriterPassword).NotEmpty().WithMessage("Parola Boş Geçemezsiniz");
+            RuleFor(x => x.WriterTitle).NotEmpty().WithMessage("Ünvan Boş Geçemezsiniz");
+
         }
     }
 }

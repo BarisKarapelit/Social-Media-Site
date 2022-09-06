@@ -11,7 +11,7 @@ namespace EntityLayer.Concrete
    public class Writer
     {
         [Key]
-        [DisplayName("ID")]
+        [DisplayName("Yazar No")]
         public int WriterID { get; set; }
         [StringLength(50)]
         [Display(Name = "Yazar Adı")]
@@ -21,7 +21,7 @@ namespace EntityLayer.Concrete
         public string WriterSurName { get; set; }
         
         [StringLength(2000)]
-        [Display(Name = "Yazar Görsel Linki")]
+        [DisplayName("Yazar Görsel Linki")]
         public string WriterImage { get; set; }
         [StringLength(100)]
         [Display(Name = "Hakkında")]

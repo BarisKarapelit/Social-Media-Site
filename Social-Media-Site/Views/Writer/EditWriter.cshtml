@@ -6,47 +6,50 @@
 
 <h1 class="text-center">Yeni Yazar Ekleme</h1>
 <br />
-@using (Html.BeginForm("EditWriter", "Writer", FormMethod.Post ,new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("EditWriter", "Writer", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-<div class="form-group">
-    @Html.DisplayNameFor(model => model.WriterName)
-    @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.WriterName)
-    <br /><br />
-    @Html.DisplayNameFor(model => model.WriterSurName)
-    @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.WriterSurName)
-    <br /><br />
-    @Html.DisplayNameFor(model => model.WriterMail)
-    @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.WriterMail)
-    <br /><br />
-    @Html.DisplayNameFor(model => model.WriterPassword)
-    @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control" })
+    <div class="form-group">
+        @Html.DisplayNameFor(model => model.WriterID)
+        @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control", @disabled = "disabled" })
+        <br /><br />
+        @Html.DisplayNameFor(model => model.WriterName)
+        @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterName)
+        <br /><br />
+        @Html.DisplayNameFor(model => model.WriterSurName)
+        @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterSurName)
+        <br /><br />
+        @Html.DisplayNameFor(model => model.WriterMail)
+        @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterMail)
+        <br /><br />
+        @Html.DisplayNameFor(model => model.WriterPassword)
+        @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control" })
 
-    @Html.ValidationMessageFor(x => x.WriterPassword)
+        @Html.ValidationMessageFor(x => x.WriterPassword)
 
-    <br /><br />
-    @Html.DisplayNameFor(model => model.WriterImage)
-    <br />
-    
-    <p>
-       
-        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value=@Model.WriterImage>
-    </p>
-    @Html.TextBoxFor(m => m.WriterImage, new { type = "file", @id = "WriterImage" })
+        <br /><br />
+        @Html.DisplayNameFor(model => model.WriterImage)
+        <br />
 
-    @Html.ValidationMessageFor(x => x.WriterImage)
-    <br /><br />
-    @Html.DisplayNameFor(model => model.WriterAbout)
-    @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.WriterAbout)
-    <br /><br />
-    <div class="text-center">
-        <button class="btn btn-info" name="btn" value="ekle">Güncelle</button>
+        <p>
 
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value=@Model.WriterImage>
+        </p>
+        @Html.TextBoxFor(m => m.WriterImage, new { type = "file", @id = "WriterImage" })
+
+        @Html.ValidationMessageFor(x => x.WriterImage)
+        <br /><br />
+        @Html.DisplayNameFor(model => model.WriterAbout)
+        @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterAbout)
+        <br /><br />
+        <div class="text-center">
+            <button class="btn btn-info" name="btn" value="ekle">Güncelle</button>
+
+        </div>
     </div>
-</div>
 }
 
 

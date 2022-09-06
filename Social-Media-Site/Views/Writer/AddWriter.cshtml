@@ -48,21 +48,35 @@
                     <div class="form-group mb-3">
                         <label class="label" for="first_name">@Html.DisplayNameFor(model => model.WriterName)</label>
                         @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control", @name = "first_name", @placeholder = "Tom", @type = "text" })
+                        @Html.ValidationMessageFor(x=>x.WriterName,null,  new { @class = "text-danger" })
                     </div>
                     <div class="form-group mb-3">
                         <label class="label" for="last_name">@Html.DisplayNameFor(model => model.WriterSurName)</label>
 
                         @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control", @name = "last_name", @placeholder = "Doe", @type = "text" })
+                        @Html.ValidationMessageFor(x => x.WriterSurName, null, new { @class = "text-danger" })
+
                     </div>
                     <div class="form-group mb-3">
                         <label class="label" for="email">@Html.DisplayNameFor(model => model.WriterMail)</label>
 
                         @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control", @name = "email", @placeholder = "johndoe@gmail.com", @type = "text" })
+                        @Html.ValidationMessageFor(x => x.WriterMail, null, new { @class = "text-danger" })
+
                     </div>
                     <div class="form-group mb-3">
                         <label class="label" for="user_password">@Html.DisplayNameFor(model => model.WriterPassword)</label>
                         @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control", @name = "user_password", @placeholder = @Html.DisplayNameFor(model => model.WriterPassword), @type = "text" })
+                        @Html.ValidationMessageFor(x => x.WriterPassword, null, new { @class = "text-danger" })
+
                         <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="label" for="WriterTitle">@Html.DisplayNameFor(model => model.WriterTitle)</label>
+
+                        @Html.TextBoxFor(x => x.WriterTitle, new { @class = "form-control", @name = "WriterTitle", @placeholder = "Ünvan", @type = "text" })
+                        @Html.ValidationMessageFor(x => x.WriterTitle, null, new { @class = "text-danger" })
+
                     </div>
                     <div class="form-group mb-3">
                         <label class="label" for="WriterAbout">@Html.DisplayNameFor(model => model.WriterAbout)</label>
