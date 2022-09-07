@@ -62,16 +62,19 @@ namespace DataAccessLayer.Concrete.Repositories
             if (t!=null)
             {
                 var updatedEntity = context.Entry(t);
-                updatedEntity.State = EntityState.Modified;
+                
                
                 try
                 {
+                    updatedEntity.State = EntityState.Modified;
                     context.SaveChanges();
                 }
-                catch (OptimisticConcurrencyException)
+                catch (OptimisticConcurrencyException hata)
                 {
-                  
+                    string hat = (hata.ToString());
+                    Console.WriteLine(hat);
                     context.SaveChanges();
+                 
                 }
             }
             

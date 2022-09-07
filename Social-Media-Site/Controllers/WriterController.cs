@@ -76,6 +76,20 @@ namespace Social_Media_Site.Controllers
         public ActionResult EditWriter(Writer writer)
         {
             ValidationResult result = writerValidator.Validate(writer);
+            if (Request.Files.Count != 0)
+            {
+                string DosyaAdi = Path.GetFileName(Request.Files[0].FileName);
+                if (DosyaAdi!=null&&DosyaAdi.Length > 0)
+                {
+                    
+                    //  string Uzanti = Path.GetExtension(Request.Files[0].FileName);
+                    string Yol = "~/img/Writer/" + DosyaAdi;
+                    Request.Files[0].SaveAs(Server.MapPath(Yol));
+                    writer.WriterImage = Yol;
+                }
+                
+
+            }
             if (result.IsValid)
             {
                 writerManager.WriterUpdate(writer);
