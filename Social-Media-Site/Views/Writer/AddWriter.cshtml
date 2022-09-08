@@ -48,7 +48,7 @@
                     <div class="form-group mb-3">
                         <label class="label" for="first_name">@Html.DisplayNameFor(model => model.WriterName)</label>
                         @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control", @name = "first_name", @placeholder = "Tom", @type = "text" })
-                        @Html.ValidationMessageFor(x=>x.WriterName,null,  new { @class = "text-danger" })
+                        @Html.ValidationMessageFor(x => x.WriterName, null, new { @class = "text-danger" })
                     </div>
                     <div class="form-group mb-3">
                         <label class="label" for="last_name">@Html.DisplayNameFor(model => model.WriterSurName)</label>
@@ -67,10 +67,9 @@
                     <div class="form-group mb-3">
                         <label class="label" for="user_password">@Html.DisplayNameFor(model => model.WriterPassword)</label>
                         @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control", @name = "user_password", @placeholder = @Html.DisplayNameFor(model => model.WriterPassword), @type = "text" })
-                        @Html.ValidationMessageFor(x => x.WriterPassword, null, new { @class = "text-danger" })
-
                         <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                     </div>
+                    @Html.ValidationMessageFor(x => x.WriterPassword, null, new { @class = "text-danger" })
                     <div class="form-group mb-3">
                         <label class="label" for="WriterTitle">@Html.DisplayNameFor(model => model.WriterTitle)</label>
 

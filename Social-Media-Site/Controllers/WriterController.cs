@@ -73,8 +73,21 @@ namespace Social_Media_Site.Controllers
             return View(writerValue);
         }
         [HttpPost]
-        public ActionResult EditWriter(Writer writer)
+        public ActionResult EditWriter(Writer writer, int id)
         {
+            var writerValue = writerManager.GetByID(id);
+            string Yol;
+            if (writer.WriterImage == null)
+             {
+                Yol = "~/img/Writer/user1.jpg";
+                writer.WriterImage = Yol;
+            }
+            else
+            {
+                Yol = "~/img/Writer/" + writer.WriterImage.ToString();
+              
+            }
+             
             ValidationResult result = writerValidator.Validate(writer);
             if (Request.Files.Count != 0)
             {
@@ -83,7 +96,7 @@ namespace Social_Media_Site.Controllers
                 {
                     
                     //  string Uzanti = Path.GetExtension(Request.Files[0].FileName);
-                    string Yol = "~/img/Writer/" + DosyaAdi;
+                     Yol = "~/img/Writer/" + DosyaAdi;
                     Request.Files[0].SaveAs(Server.MapPath(Yol));
                     writer.WriterImage = Yol;
                 }
@@ -92,6 +105,7 @@ namespace Social_Media_Site.Controllers
             }
             if (result.IsValid)
             {
+                writer.WriterImage = Yol;
                 writerManager.WriterUpdate(writer);
                 return RedirectToAction("Index");
 
@@ -102,6 +116,7 @@ namespace Social_Media_Site.Controllers
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
+                
             }
             return View();
         }

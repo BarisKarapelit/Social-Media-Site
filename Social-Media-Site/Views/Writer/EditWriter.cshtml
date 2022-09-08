@@ -3,7 +3,27 @@
     ViewBag.Title = "EditWriter";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<style>
+    .validation-summary-errors {
+        border: 2px solid red;
+        color: red;
+        font-weight: bold;
+        margin: 6px;
+        width: 30%;
+    }
 
+    .field-validation-error {
+        color: red;
+        font-weight: bold;
+        background-color: white;
+    }
+
+    .input-validation-error {
+        color: red;
+        font-weight: bold;
+        background-color: azure;
+    }
+</style>
 <h1 class="text-center">Yazar Güncelleme</h1>
 <br />
 @using (Html.BeginForm("EditWriter", "Writer", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -11,11 +31,11 @@
     <div class="form-group">
         @Html.DisplayNameFor(Model => Model.WriterID)
         @Html.HiddenFor(Model => Model.WriterID)
-        @*@Html.TextBoxFor(Model => Model.WriterID, new { @class = "form-control", @disabled = "disabled" })*@
+        @Html.TextBoxFor(Model => Model.WriterID, new { @class = "form-control", @disabled = "disabled" })
         <br /><br />
         @Html.DisplayNameFor(Model => Model.WriterTitle)
         @Html.TextBoxFor(Model => Model.WriterTitle, new { @class = "form-control" })
-        @Html.ValidationMessageFor(Model => Model.WriterTitle)
+        @*@Html.ValidationMessageFor(Model => Model.WriterTitle, null, new { @class = "text-danger" })*@ 
 
         <br /><br />
         @Html.DisplayNameFor(Model => Model.WriterName)
@@ -24,34 +44,28 @@
         <br /><br />
         @Html.DisplayNameFor(Model => Model.WriterSurName)
         @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control" })
-        @Html.ValidationMessageFor(Model => Model.WriterSurName)
+        @*@Html.ValidationMessageFor(Model => Model.WriterSurName, null, new { @class = "text-danger" })*@
         <br /><br />
         @Html.DisplayNameFor(Model => Model.WriterMail)
         @Html.TextBoxFor(Model => Model.WriterMail, new { @class = "form-control" })
-        @Html.ValidationMessageFor(Model => Model.WriterMail)
+        @*@Html.ValidationMessageFor(Model => Model.WriterMail, null, new { @class = "text-danger" })*@
         <br /><br />
         @Html.DisplayNameFor(Model => Model.WriterPassword)
         @Html.TextBoxFor(Model => Model.WriterPassword, new { @class = "form-control" })
-
-        @Html.ValidationMessageFor(Model => Model.WriterPassword)
-
-        <br /><br />
-        @Html.DisplayNameFor(Model => Model.WriterImage)
-        
-        <br />
-
-        <p>
-
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value=@Model.WriterImage>
-        </p>
-        @Html.TextBoxFor(Model => Model.WriterImage, new { type = "file", @id = "WriterImage" })
-
-        @Html.ValidationMessageFor(Model => Model.WriterImage)
+        @*@Html.ValidationMessageFor(Model => Model.WriterPassword, null, new { @class = "text-danger" })*@
         <br /><br />
         @Html.DisplayNameFor(Model => Model.WriterAbout)
         @Html.TextBoxFor(Model => Model.WriterAbout, new { @class = "form-control" })
         @Html.ValidationMessageFor(Model => Model.WriterAbout)
         <br /><br />
+        @Html.DisplayNameFor(Model => Model.WriterImage)
+        <br />
+        <p>
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value=@Model.WriterImage>
+        </p>
+        @Html.TextBoxFor(Model => Model.WriterImage, new { type = "file", @id = "WriterImage" })
+        <br /><br />
+
         <div class="text-center">
             <button class="btn btn-info" name="btn" value="ekle">Güncelle</button>
 

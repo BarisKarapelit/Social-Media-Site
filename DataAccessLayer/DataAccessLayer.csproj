@@ -88,6 +88,14 @@
     <Compile Include="Migrations\202209051209395_InitialMigration.designer.cs">
       <DependentUpon>202209051209395_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202209081333120_About_details_field_add.cs" />
+    <Compile Include="Migrations\202209081333120_About_details_field_add.designer.cs">
+      <DependentUpon>202209081333120_About_details_field_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209081335413_About_details_field_deleted.cs" />
+    <Compile Include="Migrations\202209081335413_About_details_field_deleted.designer.cs">
+      <DependentUpon>202209081335413_About_details_field_deleted.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,6 +124,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202209051209395_InitialMigration.resx">
       <DependentUpon>202209051209395_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209081333120_About_details_field_add.resx">
+      <DependentUpon>202209081333120_About_details_field_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209081335413_About_details_field_deleted.resx">
+      <DependentUpon>202209081335413_About_details_field_deleted.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

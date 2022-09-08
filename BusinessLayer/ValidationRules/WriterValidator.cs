@@ -26,6 +26,7 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.WriterMail).EmailAddress();
             RuleFor(x => x.WriterPassword).NotEmpty().WithMessage("Parola Boş Geçemezsiniz");
             RuleFor(x => x.WriterTitle).NotEmpty().WithMessage("Ünvan Boş Geçemezsiniz");
+            RuleFor(x => x.WriterImage).NotEmpty().WithMessage("Resim Seçiniz");
 
         }
     }
