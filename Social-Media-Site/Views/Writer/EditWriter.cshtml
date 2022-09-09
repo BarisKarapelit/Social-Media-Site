@@ -26,7 +26,7 @@
 </style>
 <h1 class="text-center">Yazar Güncelleme</h1>
 <br />
-@using (Html.BeginForm("EditWriter", "Writer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
 {
     <div class="form-group">
         @Html.DisplayNameFor(Model => Model.WriterID)
@@ -34,26 +34,26 @@
         @Html.TextBoxFor(Model => Model.WriterID, new { @class = "form-control", @disabled = "disabled" })
         <br /><br />
         @Html.DisplayNameFor(Model => Model.WriterTitle)
-        @Html.TextBoxFor(Model => Model.WriterTitle, new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(Model => Model.WriterTitle, null, new { @class = "text-danger" })*@ 
+        @Html.TextBoxFor(Model => Model.WriterTitle, new { @class = "form-control" })-->
+        @*@Html.ValidationMessageFor(Model => Model.WriterTitle, null, new { @class = "text-danger" })*@
 
-        <br /><br />
+        <!--<br /><br />
         @Html.DisplayNameFor(Model => Model.WriterName)
         @Html.TextBoxFor(Model => Model.WriterName, new { @class = "form-control" })
         @Html.ValidationMessageFor(Model => Model.WriterName)
         <br /><br />
         @Html.DisplayNameFor(Model => Model.WriterSurName)
-        @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control" })-->
         @*@Html.ValidationMessageFor(Model => Model.WriterSurName, null, new { @class = "text-danger" })*@
-        <br /><br />
+        <!--<br /><br />
         @Html.DisplayNameFor(Model => Model.WriterMail)
-        @Html.TextBoxFor(Model => Model.WriterMail, new { @class = "form-control" })
+        @Html.TextBoxFor(Model => Model.WriterMail, new { @class = "form-control" })-->
         @*@Html.ValidationMessageFor(Model => Model.WriterMail, null, new { @class = "text-danger" })*@
-        <br /><br />
+        <!--<br /><br />
         @Html.DisplayNameFor(Model => Model.WriterPassword)
-        @Html.TextBoxFor(Model => Model.WriterPassword, new { @class = "form-control" })
+        @Html.TextBoxFor(Model => Model.WriterPassword, new { @class = "form-control" })-->
         @*@Html.ValidationMessageFor(Model => Model.WriterPassword, null, new { @class = "text-danger" })*@
-        <br /><br />
+        <!--<br /><br />
         @Html.DisplayNameFor(Model => Model.WriterAbout)
         @Html.TextBoxFor(Model => Model.WriterAbout, new { @class = "form-control" })
         @Html.ValidationMessageFor(Model => Model.WriterAbout)
@@ -71,6 +71,40 @@
 
         </div>
     </div>
+}-->
+
+
+@using (Html.BeginForm("EditWriter", "Writer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        @Html.HiddenFor(w => w.WriterID, new { @class = "form-control" })
+        @Html.HiddenFor(w => w.WriterPassword, new { @class = "form-control" })
+        @Html.HiddenFor(w => w.WriterPassword, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yazar Adı")
+        @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterName, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Yazar Soyadı")
+        @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterSurName, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Yazar Maili")
+        @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterMail, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Yazar Görsel Linki")
+        @Html.TextBoxFor(x => x.WriterImage, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterImage, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Yazar Ünvan")
+        @Html.TextBoxFor(x => x.WriterTitle, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterTitle, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Yazar Hakkında")
+        @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterAbout, "", new { @style = "color:red" })
+        <br />
+        <button class="btn btn-success">Değişiklikleri Uygula</button>
+    </div>
 }
-
-

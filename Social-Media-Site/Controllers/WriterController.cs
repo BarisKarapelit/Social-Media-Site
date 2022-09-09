@@ -66,7 +66,7 @@ namespace Social_Media_Site.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult EditWriter(int id)
+        public ActionResult EditWriter(int id, Writer writer)
         {
             var writerValue = writerManager.GetByID(id);
 
