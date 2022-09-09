@@ -66,16 +66,16 @@ namespace Social_Media_Site.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult EditWriter(int id, Writer writer)
+        public ActionResult EditWriter(int id)
         {
             var writerValue = writerManager.GetByID(id);
 
             return View(writerValue);
         }
         [HttpPost]
-        public ActionResult EditWriter(Writer writer, int id)
+        public ActionResult EditWriter(Writer writer)
         {
-            var writerValue = writerManager.GetByID(id);
+           
             string Yol;
             if (writer.WriterImage == null)
              {
