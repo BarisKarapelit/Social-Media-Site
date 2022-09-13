@@ -18,29 +18,32 @@ namespace BusinessLayer.Concrete
             _headingDal = headingDal;
         }
 
-        public void HeadingAddBL(Heading heading)
-        {
-            throw new NotImplementedException();
-        }
-
+       
         public void HeadingDelete(Heading heading)
         {
-            throw new NotImplementedException();
+           _headingDal.Delete(heading);
         }
 
         public void HeadingUpdate(Heading heading)
         {
-            throw new NotImplementedException();
-        }
-
-        public Heading GetByID(int id)
-        {
-            throw new NotImplementedException();
+            _headingDal.Update(heading);
         }
 
         public List<Heading> GetList()
         {
             return _headingDal.List();
         }
+
+        public void HeadingAdd(Heading heading)
+        {
+            _headingDal.Insert(heading);
+        }
+
+        public Heading GetByID(int id)
+        {
+            return _headingDal.Get(x => x.HeadingID == id);
+        }
+
+        
     }
 }

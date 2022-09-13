@@ -55,10 +55,10 @@ C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessL
 C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.writerimglinkedit.resources
 C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.WriteImageLinkLengthEdit.resources
 C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.InitialMigration.resources
+C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.About_details_field_add.resources
+C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.About_details_field_deleted.resources
 C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.About_details_field_add.resources
-C:\Users\HP\source\repos\Social-Media-Site\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.About_details_field_deleted.resources

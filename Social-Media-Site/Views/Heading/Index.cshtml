@@ -1,0 +1,106 @@
+﻿@model EntityLayer.Concrete.Heading
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="~/css-table-19/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/css-table-19/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css-table-19/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="/css-table-19/css/style.css">
+
+   
+</head>
+<body>
+
+
+    <table class="table custom-table table-hover">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">@Html.DisplayNameFor(Model => Model.HeadingID)</th>
+                <th scope="col">@Html.DisplayNameFor(Model => Model.HeadingName)</th>
+                <th scope="col">@Html.DisplayNameFor(Model => Model.HeadingDate)</th>
+                <th scope="col">Kategori</th>
+                <th scope="col">Yazar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.HeadingValues)
+            {
+                <tr>
+                    <th scope="row">
+                        <label class="control control--checkbox">
+                            <input type="checkbox" />
+                            <div class="control__indicator"></div>
+                        </label>
+                    </th>
+                    <td>
+                        @item.HeadingID
+                    </td>
+                    <td>
+                        @item.HeadingName
+                    </td>
+                    <td>
+                        @item.HeadingDate.Date.ToString("dd MMM yyyy")
+                    </td>
+                    <td>
+                        @foreach (var Category in ViewBag.CategoryValues)
+                        {
+                            if (item.CategoryID==Category.CategoryID)
+                            {
+                                @Category.CategoryName
+                            }
+                        }
+                        
+                    </td>
+                    <td>
+                        @foreach (var writer in ViewBag.WriterValues)
+                        {
+                            if (writer.WriterID == item.WriterID)
+                            {
+
+                               
+                                <ul class="persons">
+                                    <li>
+                                        <a href="#">
+                                            <img src=@Url.Content(writer.WriterImage) alt=@ViewData["fullName"] title=@(String.Format("{0}{1}", writer.WriterName, writer.WriterSurName)) class="img-fluid">
+                                        </a>
+                                    </li>
+                                </ul>
+                            }
+
+                        }
+
+                    </td>
+                </tr>
+            }
+
+
+
+
+        </tbody>
+    </table>
+
+
+
+    <script src="/css-table-19/js/jquery-3.3.1.min.js"></script>
+    <script src="/css-table-19/js/popper.min.js"></script>
+    <script src="/css-table-19/js/bootstrap.min.js"></script>
+    <script src="/css-table-19/js/main.js"></script>
+</body>
+</html>
+
