@@ -23,18 +23,6 @@ namespace Social_Media_Site.Controllers
             ViewBag.CategoryValues=categoryvalues;
             ViewBag.HeadingValues = headingvalues;
             ViewBag.WriterValues=writervalues;
-            var fullName = "";
-            for (int i = 0; i < headingvalues.Count; i++)
-            {
-                for (int j = 0; j < writervalues.Count; j++)
-                {
-                    if (headingvalues[i].WriterID==writervalues[j].WriterID)
-                    {
-                        fullName=writervalues[j].WriterName+" "+writervalues[j].WriterSurName;
-                    }
-                }
-            }
-            ViewData["fullName"]=fullName;
             return View();
 
             

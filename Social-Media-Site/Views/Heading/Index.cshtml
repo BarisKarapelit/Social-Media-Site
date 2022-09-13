@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-    
+    <link href="~/CSS/Heading/imgstyle.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css-table-19/fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="~/css-table-19/css/owl.carousel.min.css">
@@ -22,7 +22,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="/css-table-19/css/style.css">
 
-   
+
 </head>
 <body>
 
@@ -60,47 +60,90 @@
                     <td>
                         @foreach (var Category in ViewBag.CategoryValues)
                         {
-                            if (item.CategoryID==Category.CategoryID)
+                            if (item.CategoryID == Category.CategoryID)
                             {
                                 @Category.CategoryName
                             }
                         }
-                        
+
                     </td>
                     <td>
                         @foreach (var writer in ViewBag.WriterValues)
                         {
-                            if (writer.WriterID == item.WriterID)
+                            if (item.WriterID == writer.WriterID)
                             {
 
-                               
+
                                 <ul class="persons">
                                     <li>
-                                        <a href="#">
-                                            <img src=@Url.Content(writer.WriterImage) alt=@ViewData["fullName"] title=@(String.Format("{0}{1}", writer.WriterName, writer.WriterSurName)) class="img-fluid">
-                                        </a>
+                                        
+                                        <div class="parent">
+
+                                            <a>
+                                                <img src=@Url.Content(writer.WriterImage) alt=@(String.Format("{0}{1}", writer.WriterName, writer.WriterSurName)) title=@(String.Format("{0}{1}", writer.WriterName, writer.WriterSurName)) class="img-fluid">
+
+                                            </a>
+
+                                            <div id="myModal" class="modal">
+                                                <img class="modal-content" id="img01">
+                                                <div id="caption"></div>
+                                            </div>
+                                        </div>
+
                                     </li>
                                 </ul>
+                                
+                                
                             }
+
 
                         }
 
                     </td>
                 </tr>
             }
-
-
-
-
         </tbody>
     </table>
 
-
-
-    <script src="/css-table-19/js/jquery-3.3.1.min.js"></script>
-    <script src="/css-table-19/js/popper.min.js"></script>
-    <script src="/css-table-19/js/bootstrap.min.js"></script>
-    <script src="/css-table-19/js/main.js"></script>
 </body>
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="~/Js/Heading/img.js"></script>
+<script src="/css-table-19/js/jquery-3.3.1.min.js"></script>
+<script src="/css-table-19/js/popper.min.js"></script>
+<script src="/css-table-19/js/bootstrap.min.js"></script>
+<script src="/css-table-19/js/main.js"></script>
+<script>
+    // Gallery spotlight functionality
+    // Get nodes
+    const modal = document.getElementById('myModal');
+    const modalImg = document.getElementById("img01");
+    const captionText = document.getElementById("caption");
+    const context = document.getElementsByClassName('parent')[0];
+    const contextImgs = context.getElementsByTagName('img');
+    const targetImgs = [];
 
+    // Get target images
+    Array.from(contextImgs).forEach(function (img, index) {
+        if (img.classList[0] == 'modal-content') { return; }
+        else { targetImgs.push(img); }
+    });
+
+    // Open the modal when click on img
+    targetImgs.forEach(function (img, index) {
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    });
+
+    // Close the modal 
+    modal.onclick = function () {
+        img01.className += " out";
+        setTimeout(function () {
+            modal.style.display = "none";
+            img01.className = "modal-content";
+        }, 400);
+    }  
+</script>

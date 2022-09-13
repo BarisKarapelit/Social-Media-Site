@@ -1980,6 +1980,7 @@
     <Content Include="css-table-19\js\owl.carousel.min.js" />
     <Content Include="css-table-19\js\popper.min.js" />
     <Content Include="css-table-19\main.html" />
+    <Content Include="CSS\Heading\imgstyle.css" />
     <Content Include="CSS\Writer.css" />
     <Content Include="css-table-19\.DS_Store" />
     <Content Include="css-table-19\css\.DS_Store" />
@@ -2083,6 +2084,7 @@
     <Content Include="css-table-19\scss\style.scss" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="CSS\Writer\WriterAdd\add.css" />
+    <Content Include="Js\Heading\img.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
@@ -2425,7 +2427,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="CSS\Heading\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
