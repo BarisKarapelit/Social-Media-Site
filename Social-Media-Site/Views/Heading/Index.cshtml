@@ -27,7 +27,7 @@
 <body>
 
 
-    <table class="table custom-table table-hover">
+    <table class="table custom-table table-hover" id="imgcount">
         <thead>
             <tr>
                 <th scope="col"></th>
@@ -68,6 +68,7 @@
 
                     </td>
                     <td>
+
                         @foreach (var writer in ViewBag.WriterValues)
                         {
                             if (item.WriterID == writer.WriterID)
@@ -76,12 +77,15 @@
 
                                 <ul class="persons">
                                     <li>
-                                        
-                                        <div class="parent">
+
+                                        <div class="parent" value="@writer.WriterID">
 
                                             <a>
                                                 <img src=@Url.Content(writer.WriterImage) alt=@(String.Format("{0}{1}", writer.WriterName, writer.WriterSurName)) title=@(String.Format("{0}{1}", writer.WriterName, writer.WriterSurName)) class="img-fluid">
 
+                                            </a>
+                                            <a href="#">
+                                                <img src=@Url.Content(writer.WriterImage) alt="Person" class="img-fluid">
                                             </a>
 
                                             <div id="myModal" class="modal">
@@ -92,8 +96,8 @@
 
                                     </li>
                                 </ul>
-                                
-                                
+
+
                             }
 
 
@@ -114,36 +118,10 @@
 <script src="/css-table-19/js/bootstrap.min.js"></script>
 <script src="/css-table-19/js/main.js"></script>
 <script>
-    // Gallery spotlight functionality
-    // Get nodes
-    const modal = document.getElementById('myModal');
-    const modalImg = document.getElementById("img01");
-    const captionText = document.getElementById("caption");
-    const context = document.getElementsByClassName('parent')[0];
-    const contextImgs = context.getElementsByTagName('img');
-    const targetImgs = [];
+    function zoom(imgId) {
+        console.log(imgId);
+        
 
-    // Get target images
-    Array.from(contextImgs).forEach(function (img, index) {
-        if (img.classList[0] == 'modal-content') { return; }
-        else { targetImgs.push(img); }
-    });
-
-    // Open the modal when click on img
-    targetImgs.forEach(function (img, index) {
-        img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-    });
-
-    // Close the modal 
-    modal.onclick = function () {
-        img01.className += " out";
-        setTimeout(function () {
-            modal.style.display = "none";
-            img01.className = "modal-content";
-        }, 400);
-    }  
+    };
+   
 </script>
