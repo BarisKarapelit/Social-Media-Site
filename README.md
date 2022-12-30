@@ -6,7 +6,7 @@ Repo Murat Yücedağ ile MVC Proje Kampı konularına paralel olarak geliştiril
 Eğitime ulaşmak için [tıklayınız](https://www.youtube.com/watch?v=yFToRUL6h8A&list=PLKnjBHu2xXNNQJehhCg--CzQQMHXTsFAb)
 <br>
 👍 Toplam 100 Dersten oluşacak kampın 100.derse gelinerek dört sertifika görevi tamamlandı. Aşağıdaki sertifikayı alma hakkına sahip oldum.
-<img src = "https://github.com/berkcangumusisik/MvcProjeKampi/blob/master/G%C3%B6rseller/BERKCAN%20G%C3%9CM%C3%9C%C5%9EI%C5%9EIK.jpg">
+<img src = "">
 <br>
 ## 1. SERTİFİKA GÖREVİNE KADAR YAPILANLAR
 <ol>
